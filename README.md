@@ -4,7 +4,6 @@ A beautiful, seamless, full-stack weather forecasting application built with the
 
 Aura provides real-time weather data with a stunning glassmorphism UI and dynamic animated backgrounds that change based on the current weather conditions. It also features a "Recent Searches" history powered by a MongoDB database.
 
-> **Note:** Don't forget to add a screenshot of your application in the repository and link it here!
 > ![Aura Weather Screenshot](screenshot.png)
 
 ## ✨ Features
