@@ -1,0 +1,21 @@
+# MERN Stack Migration Tasks
+
+- [x] Project Structure Setup
+  - [x] Initialize React frontend using Vite in `client` directory
+- [x] MongoDB Integration (M)
+  - [x] Install `mongoose`
+  - [x] Setup MongoDB connection in server
+  - [x] Create [Search](file:///d:/weather/client/src/components/SearchHistory.jsx#1-23) model to track search history
+  - [x] Add API routes for saving and retrieving recent searches
+- [x] Express & Node Backend Updates (E & N)
+  - [x] Update `/api/weather` to save search history to MongoDB
+  - [x] Create endpoint for fetching recent searches
+  - [x] Update CORS for React development server
+- [x] React Frontend Development (R)
+  - [x] Create React components ([Header](file:///d:/weather/client/src/components/Header.jsx#3-38), [WeatherCard](file:///d:/weather/client/src/components/WeatherCard.jsx#1-33), [SearchHistory](file:///d:/weather/client/src/components/SearchHistory.jsx#1-23), [Loader](file:///d:/weather/client/src/components/Loader.jsx#1-8))
+  - [x] Replicate existing beautiful UI and CSS in React components
+  - [x] Implement data fetching from backend API
+  - [x] Add Recent Searches section to the UI
+- [x] Deployment / Cleanup
+  - [x] Remove old `public` directory
+  - [x] Setup concurrent dev scripts

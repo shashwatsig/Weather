@@ -1,0 +1,37 @@
+import { useState } from 'react';
+
+export default function Header({ onSearch, error }) {
+  const [input, setInput] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (input.trim()) {
+      onSearch(input.trim());
+      setInput('');
+    }
+  };
+
+  return (
+    <header className="header">
+      <h1>Aura</h1>
+      <form onSubmit={handleSubmit} className="search-box">
+        <input
+          type="text"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          placeholder="Enter a city name..."
+          autoComplete="off"
+        />
+        <button type="submit" aria-label="Search">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+      </form>
+      <div className={`error-message ${error ? 'visible' : ''}`}>
+        {error}
+      </div>
+    </header>
+  );
+}
